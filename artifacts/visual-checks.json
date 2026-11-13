@@ -1,0 +1,52 @@
+[
+  {
+    "width": 1440,
+    "body": 1440,
+    "cards": 9,
+    "brokenImages": [],
+    "canvas": {
+      "engine": "three.js r186",
+      "place": "laxmi-vilas-palace",
+      "time": "golden",
+      "mode": "realistic",
+      "weather": "clear",
+      "autoTour": "false",
+      "camera": "19.961,26.651,38.387",
+      "target": "0.000,8.225,0.000",
+      "status": "ready",
+      "frames": "56",
+      "geometries": "56",
+      "triangles": "9470",
+      "particles": "0",
+      "weatherSample": "0",
+      "motion": "full"
+    },
+    "name": "desktop",
+    "errors": []
+  },
+  {
+    "width": 390,
+    "body": 390,
+    "cards": 9,
+    "brokenImages": [],
+    "canvas": {
+      "engine": "three.js r186",
+      "place": "laxmi-vilas-palace",
+      "time": "golden",
+      "mode": "realistic",
+      "weather": "clear",
+      "autoTour": "false",
+      "camera": "21.739,28.292,41.806",
+      "target": "0.000,8.225,0.000",
+      "status": "ready",
+      "frames": "85",
+      "geometries": "56",
+      "triangles": "9470",
+      "particles": "0",
+      "weatherSample": "0",
+      "motion": "full"
+    },
+    "name": "mobile",
+    "errors": []
+  }
+]

@@ -1,0 +1,386 @@
+/* ============================================================
+   Vadodara 3D Heritage Explorer — Application Styles
+   Used alongside Tailwind CDN (loaded in index.html)
+   ============================================================ */
+
+/* ─── App Root Shell ──────────────────────────────────────── */
+.vadodara-app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #020617; /* slate-950 */
+}
+
+/* ─── Full-Screen Canvas Stage ───────────────────────────── */
+.canvas-stage {
+  position: absolute;
+  inset: 0;
+  top: 0; /* Navbar is fixed, canvas goes behind & below */
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ─── Welcome / CTA Overlay ──────────────────────────────── */
+.welcome-cta {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+  z-index: 20;
+  animation: cta-rise 0.6s ease-out;
+}
+
+@keyframes cta-rise {
+  from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.welcome-cta-btn {
+  pointer-events: all;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 9999px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  color: #fde68a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  backdrop-filter: blur(12px);
+}
+
+.welcome-cta-btn:hover {
+  background: rgba(245, 158, 11, 0.28);
+  border-color: rgba(245, 158, 11, 0.75);
+  transform: scale(1.04);
+}
+
+.cta-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f59e0b;
+  animation: ping-dot 1.4s infinite;
+}
+
+@keyframes ping-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(1.35); }
+}
+
+.cta-place-name {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.cta-arrow {
+  color: #f59e0b;
+  font-size: 0.72rem;
+  font-family: monospace;
+}
+
+.cta-hint {
+  font-size: 0.65rem;
+  color: rgba(148, 163, 184, 0.65); /* slate-400/65 */
+  letter-spacing: 0.04em;
+  font-family: monospace;
+}
+
+/* ─── Render Mode Badge ──────────────────────────────────── */
+.render-mode-badge {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.render-mode-label {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(96, 165, 250, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  color: #93c5fd;
+  font-size: 0.7rem;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  backdrop-filter: blur(8px);
+}
+
+/* ─── Time Badge (Bottom Left) ───────────────────────────── */
+.time-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 20;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(2, 6, 23, 0.7);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  color: #94a3b8;
+  font-size: 0.67rem;
+  font-family: monospace;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.06em;
+  pointer-events: none;
+}
+
+/* ─── Photobooth Overlay ─────────────────────────────────── */
+.photobooth-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(18px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: overlay-fade-in 0.25s ease-out;
+}
+
+@keyframes overlay-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.photobooth-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 520px;
+  width: 100%;
+  animation: card-pop-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes card-pop-in {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Postcard ───────────────────────────────────────────── */
+.postcard-wrapper {
+  width: 100%;
+  background: linear-gradient(145deg, #1e1b4b 0%, #0f172a 100%);
+  border: 2px solid rgba(245, 158, 11, 0.5);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(245, 158, 11, 0.15),
+    0 25px 60px -12px rgba(0, 0, 0, 0.8),
+    0 0 80px -20px rgba(245, 158, 11, 0.15);
+}
+
+.postcard-header {
+  padding: 0.85rem 1.25rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  background: linear-gradient(to right, rgba(245, 158, 11, 0.12), transparent);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.postcard-tag {
+  font-size: 0.6rem;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.postcard-place-name {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.postcard-gujarati {
+  font-size: 0.75rem;
+  color: rgba(253, 230, 138, 0.7);
+  font-style: italic;
+}
+
+.postcard-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #020617;
+}
+
+.postcard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Postcard Heritage Stamp */
+.postcard-stamp {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 52px;
+  height: 52px;
+  border: 2px dashed rgba(245, 158, 11, 0.65);
+  border-radius: 0.4rem;
+  background: rgba(2, 6, 23, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stamp-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.stamp-logo {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #f59e0b;
+  line-height: 1;
+}
+
+.stamp-text {
+  font-size: 0.45rem;
+  color: #fde68a;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.stamp-year {
+  font-size: 0.55rem;
+  font-family: monospace;
+  color: #f59e0b;
+  font-weight: 800;
+}
+
+.postcard-footer {
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.postcard-coord {
+  font-size: 0.6rem;
+  font-family: monospace;
+  color: #64748b;
+}
+
+.postcard-mode {
+  font-size: 0.6rem;
+  font-family: monospace;
+  color: #64748b;
+  text-transform: capitalize;
+}
+
+/* ─── Photobooth Actions ─────────────────────────────────── */
+.photobooth-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.photobooth-btn-download {
+  padding: 0.55rem 1.4rem;
+  background: #f59e0b;
+  color: #020617;
+  font-weight: 800;
+  font-size: 0.8rem;
+  border-radius: 0.6rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.photobooth-btn-download:hover {
+  background: #fbbf24;
+  transform: scale(1.04);
+}
+
+.photobooth-btn-close {
+  padding: 0.55rem 1.1rem;
+  background: rgba(30, 41, 59, 0.9);
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.photobooth-btn-close:hover {
+  background: rgba(51, 65, 85, 0.9);
+  color: #fff;
+}
+
+/* ─── Scrollbar Thin (used in drawer) ───────────────────── */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(245, 158, 11, 0.3) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.3);
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar Hide (navbar carousel) ──────────────────── */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Spin Slow (compass rose) ──────────────────────────── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* ─── Fade In (explanation box) ─────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}

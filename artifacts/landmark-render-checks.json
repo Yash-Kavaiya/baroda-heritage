@@ -1,0 +1,74 @@
+[
+  {
+    "id": "laxmi-vilas-palace",
+    "sha256": "8011c1686697a266621ea98dacc5371a48263bf9898ad2336eb996e7f6ba9b44",
+    "width": 870,
+    "height": 630,
+    "geometries": 56,
+    "triangles": 9470
+  },
+  {
+    "id": "sursagar-lake",
+    "sha256": "9510491afe12c1e034718e9756e332c2f7f0ed9dd5c9e8b2ee8625e946bc8cbf",
+    "width": 870,
+    "height": 630,
+    "geometries": 54,
+    "triangles": 13418
+  },
+  {
+    "id": "sayaji-baug",
+    "sha256": "49dfd7aa953ed8ecbfd21a35f00a76e4f8b7b4c8c60e0839e04c5ef4297a9659",
+    "width": 870,
+    "height": 630,
+    "geometries": 44,
+    "triangles": 9482
+  },
+  {
+    "id": "kirti-mandir",
+    "sha256": "5ee664a50bdb64fae4caa50b471547d414d2001c8dd6dacd94430ed8686b1127",
+    "width": 870,
+    "height": 630,
+    "geometries": 31,
+    "triangles": 5970
+  },
+  {
+    "id": "nyay-mandir",
+    "sha256": "fdc1363bcead37ae45a651e6bd84971771bcebe66a9a9eb2ff3c3b3de4bf5584",
+    "width": 870,
+    "height": 630,
+    "geometries": 22,
+    "triangles": 5298
+  },
+  {
+    "id": "eme-temple",
+    "sha256": "efa33e8593c1c4509169fac1170215ec7025074319d3632b5c8551f533dd7674",
+    "width": 870,
+    "height": 630,
+    "geometries": 25,
+    "triangles": 2242
+  },
+  {
+    "id": "pavagadh-champaner",
+    "sha256": "cc7cdac9264a75fe0cd4162e8cae4e4e6a162a535896adec8c60d90914923a4a",
+    "width": 870,
+    "height": 630,
+    "geometries": 20,
+    "triangles": 2674
+  },
+  {
+    "id": "khanderao-market",
+    "sha256": "469f6c47216db83fb39df08d9acca3d4f74919f46952ed7bf05fff1adbf2563f",
+    "width": 870,
+    "height": 630,
+    "geometries": 38,
+    "triangles": 6930
+  },
+  {
+    "id": "baroda-museum",
+    "sha256": "dff5de429949d2cbe5fc261e3ac53eccee8a2d5bf245794889c597aed6a55b07",
+    "width": 870,
+    "height": 630,
+    "geometries": 34,
+    "triangles": 6066
+  }
+]
