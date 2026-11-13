@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" />
-      <stop offset="50%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#d97706" />
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="24" fill="#020617" />
-  <rect x="4" y="4" width="92" height="92" rx="20" fill="none" stroke="url(#goldGrad)" stroke-width="4" />
-  <!-- Gujarati letter 'વ' (Va for Vadodara) -->
-  <text x="50" y="70" font-family="'Noto Sans Gujarati', sans-serif" font-size="54" font-weight="bold" fill="url(#goldGrad)" text-anchor="middle">વ</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="goldGrad" x1="0%" x2="100%" y1="0%" y2="100%"><stop offset="0%" stop-color="#f59e0b"/><stop offset="50%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#d97706"/></linearGradient></defs><rect width="100" height="100" fill="#020617" rx="24"/><rect width="92" height="92" x="4" y="4" fill="none" stroke="url(#goldGrad)" stroke-width="4" rx="20"/><text x="50" y="70" fill="url(#goldGrad)" font-family="'Noto Sans Gujarati', sans-serif" font-size="54" font-weight="bold" text-anchor="middle">વ</text></svg>
